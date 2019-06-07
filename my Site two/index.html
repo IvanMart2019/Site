@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        
         <meta charset="UTF-8">
         <title>Two site on sass</title>
         <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
         <link rel="stylesheet" href="css/style.css">
-        
     </head>
     <body>
+       <script src="dist/main.js"></script>
+       <script>
+           
+            $(document).ready(function() {
+                $('.dexcriptionh1').html('Some Text !');
+                alert('Ваша версия jQuery ' + jQuery.fn.jquery);   
+            });
+        </script>
         <header>
             <div class="left_Side">
                 <div class="logo"><img src="img/dog.png" alt="#"></div>
