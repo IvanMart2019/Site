@@ -1,5 +1,6 @@
 import $ from 'jquery';
 
+
 $('.dexcriptionh1').html('Some Text !');
 
 //

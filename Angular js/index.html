@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="hellowldApp">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+    <script>
+        
+        //МОДЭЛЬ
+        var model = "hellow world";
+        
+        //КОНТРОЛЛЕР
+        //создаём новый модуль, что бы он считался точкой входа в программу мы указываем его в  html lang="en" ng-app="hellowldApp"        
+        var hellowldApp = angular.module("hellowldApp", []);
+    
+        
+        // ПОВЕДЕНИЕ BEHAVOR
+        //создали контроллер hellowldCtrl на модуле hellowldApp
+        hellowldApp.controller("hellowldCtrl", function($scope) {
+            //$scope это обльект в котором мы создаём поля и храним в них данные
+
+            $scope.message = model;
+            
+            
+            $scope.clickHanadjer = function(){
+                
+                $scope.message = $scope.text;
+            }
+        });
+    </script>
+</head>
+<body ng-controller="hellowldCtrl" >
+<!--   //задаём значение из $scope.message-->
+    <h1>{{message}}</h1>
+    
+<!--    // создаём в $scope.text-->
+    <input ng-model="text">
+    
+    <button ng-click="clickHanadjer()">Обновить заголовок</button>
+</body>
+</html>
